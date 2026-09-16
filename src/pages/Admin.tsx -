@@ -1,6 +1,5 @@
-
-const TELEGRAM_LINK = "https://t.me/jones010203";
 import { useState } from "react";
+const TELEGRAM_LINK = "https://t.me/jones010203";
 
 export default function Admin() {
   const [city, setCity] = useState("Casablanca");
