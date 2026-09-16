@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Admin from "./pages/Admin.tsx";
+import Admin from "./pages/Admin";
 const TELEGRAM_LINK = "https://t.me/jones010203";
 const listings = [
   { name: "Bella Moda - مثال", price: "14,500 DH", followers: "12.4K", city: "كازا", img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
@@ -57,8 +57,10 @@ function Home() {
 export default function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(()=>{
-    if (window.location.pathname === "/admin" || window.location.hash === "#admin") setIsAdmin(true);
+    const p = window.location.pathname.toLowerCase();
+    const h = window.location.hash.toLowerCase();
+    if (p.includes("admin") || h.includes("admin")) setIsAdmin(true);
   },[]);
   if (isAdmin) return <Admin />;
   return <Home />;
-        }
+      }
