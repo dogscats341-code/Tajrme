@@ -1,44 +1,53 @@
 const TELEGRAM_LINK = "https://t.me/jones010203";
 
 const listings = [
-  { name: "Bella Moda - ملابس", price: "14,500 DH", followers: "12.4K", city: "كازا", img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=300&fit=crop" },
-  { name: "Oud LUXE - عطور", price: "22,000 DH", followers: "8.9K", city: "الرباط", img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=300&fit=crop" },
-  { name: "TechMart", price: "18,750 DH", followers: "15.2K", city: "مراكش", img: "https://images.unsplash.com/photo-1498049794561-7780e7231666?w=400&h=300&fit=crop" },
-  { name: "Natura - تجميل", price: "9,900 DH", followers: "6.3K", city: "فاس", img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop" },
-  { name: "SneakZone", price: "31,000 DH", followers: "21K", city: "طنجة", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop" },
-  { name: "Dar Deco", price: "7,200 DH", followers: "4.7K", city: "أكادير", img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" },
+  { name: "Bella Moda - مثال", price: "14,500 DH", followers: "12.4K", city: "كازا", img: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
+  { name: "Oud LUXE - مثال", price: "22,000 DH", followers: "8.9K", city: "الرباط", img: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
+  { name: "TechMart - مثال", price: "18,750 DH", followers: "15.2K", city: "مراكش", img: "https://images.unsplash.com/photo-1498049794561-7780e7231666?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
+  { name: "Natura - مثال", price: "9,900 DH", followers: "6.3K", city: "فاس", img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
+  { name: "SneakZone - مثال", price: "31,000 DH", followers: "21K", city: "طنجة", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
+  { name: "Dar Deco - مثال", price: "7,200 DH", followers: "4.7K", city: "أكادير", img: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop", badge: "مثال توضيحي" },
 ];
 
 export default function App() {
   return (
-    <div dir="rtl" style={{fontFamily:"Tajawal, sans-serif", background:"#0A0A0B", minHeight:"100vh", color:"white", padding:0, margin:0}}>
+    <div dir="rtl" style={{fontFamily:"Tajawal, sans-serif", background:"#0A0A0B", minHeight:"100vh", color:"white"}}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap'); body{margin:0;background:#0A0A0B;color:white} *{box-sizing:border-box}`}</style>
       
-      <header style={{display:"flex", justifyContent:"space-between", padding:"16px 24px", borderBottom:"1px solid #222", position:"sticky", top:0, background:"rgba(10,10,11,0.9)", backdropFilter:"blur(12px)"}}>
+      <header style={{display:"flex", justifyContent:"space-between", alignItems:"center", padding:"16px 24px", borderBottom:"1px solid #222", position:"sticky", top:0, background:"rgba(10,10,11,0.9)", backdropFilter:"blur(12px)", zIndex:10}}>
         <div style={{display:"flex", gap:8, alignItems:"center", fontWeight:900, fontSize:20}}><span style={{background:"#00D084", color:"black", width:32, height:32, display:"flex", alignItems:"center", justifyContent:"center", borderRadius:10}}>ت</span>Tajr.me</div>
-        <a href={TELEGRAM_LINK} target="_blank" style={{background:"white", color:"black", padding:"8px 16px", borderRadius:999, textDecoration:"none", fontWeight:"bold", fontSize:13}}>تليجرام @jones010203</a>
+        <a href={TELEGRAM_LINK} target="_blank" title="تواصل تليجرام" style={{background:"white", width:40, height:40, display:"flex", alignItems:"center", justifyContent:"center", borderRadius:999, textDecoration:"none"}}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#0088cc"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.945c-.643-.2-.658-.643.135-.954l11.566-4.458c.538-.196 1.006.12.832.941z"/></svg>
+        </a>
       </header>
 
       <section style={{padding:"60px 24px", maxWidth:1100, margin:"0 auto"}}>
         <div style={{background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.1)", display:"inline-flex", padding:"6px 12px", borderRadius:999, fontSize:12, marginBottom:16}}>✨ أول سوق للمتاجر الجاهزة في المغرب</div>
         <h1 style={{fontSize:42, fontWeight:900, lineHeight:1.1, margin:0}}>لا تبدأ من <span style={{color:"#00D084"}}>الصفر،</span><br/>اشتر متجراً يشتغل</h1>
-        <p style={{color:"rgba(255,255,255,0.6)", maxWidth:500, marginTop:16, lineHeight:1.6}}>آلاف المتاجر الميتة عندها متابعين حقيقيين. نحن نوصلك بالبائع بضمان تليجرام.</p>
+        <p style={{color:"rgba(255,255,255,0.6)", maxWidth:500, marginTop:16, lineHeight:1.6}}>آلاف المتاجر الميتة عندها متابعين حقيقيين. نحن نوصلك بالبائع بضمان.</p>
         <div style={{display:"flex", gap:12, marginTop:24}}>
-          <a href="#stores" style={{background:"#00D084", color:"black", padding:"14px 28px", borderRadius:999, textDecoration:"none", fontWeight:"bold"}}>تصفح المتاجر ↓</a>
-          <a href={TELEGRAM_LINK} target="_blank" style={{border:"1px solid rgba(255,255,255,0.2)", padding:"14px 28px", borderRadius:999, textDecoration:"none", color:"white", fontWeight:"bold"}}>بيع متجرك</a>
+          <a href="#stores" style={{background:"#00D084", color:"black", padding:"14px 28px", borderRadius:999, textDecoration:"none", fontWeight:"bold"}}>تصفح الأمثلة ↓</a>
+          <a href={TELEGRAM_LINK} target="_blank" style={{background:"white", width:48, height:48, display:"flex", alignItems:"center", justifyContent:"center", borderRadius:999, textDecoration:"none"}} title="تليجرام">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#0088cc"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.945c-.643-.2-.658-.643.135-.954l11.566-4.458c.538-.196 1.006.12.832.941z"/></svg>
+          </a>
         </div>
       </section>
 
       <section id="stores" style={{padding:"20px 24px", maxWidth:1100, margin:"0 auto"}}>
-        <h2 style={{fontSize:24, fontWeight:900}}>متاجر للبيع دابا</h2>
+        <h2 style={{fontSize:24, fontWeight:900}}>أمثلة لمتاجر ستباع قريبا</h2>
+        <p style={{fontSize:13, color:"rgba(255,255,255,0.4)", marginTop:4}}>هذه أمثلة توضيحية فقط لطريقة العرض - المتاجر الحقيقية ستضاف قريبا</p>
         <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:16, marginTop:20}}>
           {listings.map((l,i)=>(
-            <div key={i} style={{background:"#151517", border:"1px solid rgba(255,255,255,0.1)", borderRadius:20, overflow:"hidden"}}>
+            <div key={i} style={{background:"#151517", border:"1px solid rgba(255,255,255,0.1)", borderRadius:20, overflow:"hidden", position:"relative"}}>
+              <div style={{position:"absolute", top:10, left:10, background:"rgba(0,0,0,0.7)", color:"#00D084", fontSize:10, padding:"4px 8px", borderRadius:999, fontWeight:"bold", zIndex:2}}>{l.badge}</div>
               <img src={l.img} alt="" style={{width:"100%", height:180, objectFit:"cover"}} />
               <div style={{padding:14}}>
                 <div style={{display:"flex", justifyContent:"space-between", fontWeight:"bold"}}><span>{l.name}</span><span style={{color:"#00D084"}}>{l.price}</span></div>
                 <div style={{display:"flex", justifyContent:"space-between", fontSize:12, color:"rgba(255,255,255,0.5)", marginTop:8}}><span>📍 {l.city}</span><span>👥 {l.followers}</span></div>
-                <a href={TELEGRAM_LINK} target="_blank" style={{display:"block", textAlign:"center", marginTop:12, background:"white", color:"black", padding:"10px", borderRadius:999, textDecoration:"none", fontWeight:"bold", fontSize:13}}>تواصل على تليجرام</a>
+                <a href={TELEGRAM_LINK} target="_blank" style={{display:"flex", alignItems:"center", justifyContent:"center", gap:6, marginTop:12, background:"white", color:"black", padding:"10px", borderRadius:999, textDecoration:"none", fontWeight:"bold", fontSize:13}}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#0088cc"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.945c-.643-.2-.658-.643.135-.954l11.566-4.458c.538-.196 1.006.12.832.941z"/></svg>
+                  استفسر
+                </a>
               </div>
             </div>
           ))}
@@ -47,17 +56,20 @@ export default function App() {
 
       <section style={{padding:"40px 24px", maxWidth:1100, margin:"0 auto", marginTop:40, borderTop:"1px solid #222"}}>
         <h2 style={{fontSize:22, fontWeight:900}}>عندك متجر؟ بيعه في 48 ساعة</h2>
-        <form onSubmit={(e)=>{e.preventDefault(); alert("تم! تواصل معك على تليجرام @jones010203");}} style={{marginTop:16, display:"grid", gap:10, maxWidth:500}}>
+        <form onSubmit={(e)=>{e.preventDefault(); window.open(TELEGRAM_LINK, "_blank");}} style={{marginTop:16, display:"grid", gap:10, maxWidth:500}}>
           <input required placeholder="اسم المتجر" style={{padding:12, borderRadius:999, border:"1px solid #333", background:"#1C1C1F", color:"white"}} />
           <input required placeholder="رابط الانستغرام" style={{padding:12, borderRadius:999, border:"1px solid #333", background:"#1C1C1F", color:"white"}} />
           <input required placeholder="الثمن المطلوب DH" style={{padding:12, borderRadius:999, border:"1px solid #333", background:"#1C1C1F", color:"white"}} />
-          <button type="submit" style={{background:"#00D084", color:"black", padding:12, borderRadius:999, fontWeight:"bold", border:"none"}}>إرسال للتقييم - مجاني</button>
+          <button type="submit" style={{background:"#00D084", color:"black", padding:12, borderRadius:999, fontWeight:"bold", border:"none", display:"flex", alignItems:"center", justifyContent:"center", gap:8}}>
+            إرسال على تليجرام
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="black"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.945c-.643-.2-.658-.643.135-.954l11.566-4.458c.538-.196 1.006.12.832.941z"/></svg>
+          </button>
         </form>
       </section>
 
       <footer style={{textAlign:"center", padding:30, fontSize:12, color:"rgba(255,255,255,0.3)", borderTop:"1px solid #222", marginTop:40}}>
-        © 2026 Tajr.me - تليجرام @jones010203 - كازا
+        © 2026 Tajr.me - كازا - جميع الحقوق محفوظة
       </footer>
     </div>
   );
-                                                                }
+      }
